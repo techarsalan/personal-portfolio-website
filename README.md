@@ -1,79 +1,171 @@
-# Arsalan Ahmad – Portfolio
+# Arsalan Ahmad | Personal Portfolio Website
 
-Static site: plain HTML, CSS and JavaScript. No build step and no dependencies.
-Open `index.html` directly, or serve the folder with any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages).
+A personal digital hub that brings together professional identity, technology, projects, research, interests, and expertise. It showcases who I am, what I create, and the solutions and services I can offer.
 
-## Structure
+**Live Website:** https://whoarsalan.srht.site
 
+## About
+
+This portfolio goes beyond a traditional online resume. It provides a central space to explore my professional journey, technical capabilities, academic interests, projects, and personal pursuits.
+
+The goal is to create a digital presence that reflects both my professional identity and the person behind the work.
+
+## Portfolio Sections
+
+- **About Me:** Background, interests, and professional journey.
+- **Projects:** Development projects and technical experiments.
+- **Research:** Academic interests and research activities.
+- **Experience:** Internships and professional experience.
+- **Services:** Technical skills and solutions I can offer.
+- **Beyond Technology:** Personal interests and activities.
+- **Contact:** Opportunities for communication and collaboration.
+
+## Technology Stack
+
+**Core Technologies**
+- HTML5 — Semantic markup, ARIA attributes, and accessible navigation.
+- CSS3 — Modular styling, Grid, Flexbox, CSS custom properties, and fluid layouts.
+- Vanilla JavaScript (ES5-style) — Interactive functionality without external frameworks or libraries.
+
+**Development Tools**
+- Git and GitHub — Version control and source code management.
+- ChatGPT — Brainstorming, problem-solving, code assistance, and content refinement.
+- Claude — Development assistance, code exploration, and implementation support.
+- PostHog — Privacy-conscious website analytics with Do Not Track support.
+
+**Design and Typography**
+- Google Fonts (Geist)
+- SVG icons
+- WebP image assets
+
+## Key Features
+
+**User Experience and Interface**
+- Responsive layouts for desktop, tablet, and mobile.
+- Light and dark themes with system preference detection.
+- Theme preferences saved using localStorage.
+- Hash-based routing for project case studies.
+- Mobile navigation menu.
+- Expandable content sections.
+- Photo lightbox.
+- Scroll reveal animations and reading progress indicator.
+- Running-track animation.
+
+**Accessibility**
+- Semantic HTML structure.
+- ARIA attributes and accessible navigation.
+- Skip-to-content link.
+- Keyboard-friendly interactions.
+- Reduced-motion support through `prefers-reduced-motion`.
+- Print stylesheet.
+
+**Performance**
+- Lazy-loaded WebP images.
+- Modular CSS and JavaScript architecture.
+- No frontend framework or build process.
+- Optimized asset loading and responsive layouts.
+
+**SEO and Discoverability**
+- Descriptive page metadata.
+- Open Graph metadata.
+- Twitter Cards.
+- XML sitemap.
+- Robots.txt.
+- JSON-LD structured data using the Person schema.
+- Web app manifest.
+
+**Security and Privacy**
+- Content Security Policy (CSP).
+- Security headers.
+- Clean URL redirects.
+- Do Not Track-aware analytics.
+- Contact form honeypot for basic spam protection.
+
+**Contact Form**
+- Custom client-side validation.
+- Honeypot spam detection.
+- Pre-filled email draft using `mailto:`.
+- Opens the visitor's configured email application.
+
+## Project Architecture
+
+The website uses a modular, framework-free architecture.
+
+- **14 CSS files** for organized styling and responsive layouts.
+- **12 JavaScript modules** for interactive functionality.
+- Semantic HTML for page structure and accessibility.
+- No external JavaScript frameworks, dependencies, or build tools.
+
+## Project Structure
+
+```text
+personal-portfolio-website/
+├── contact/
+│   └── index.html
+├── css/
+│   └── 14 modular stylesheets
+├── images/
+│   └── WebP images and visual assets
+├── js/
+│   └── 12 JavaScript modules
+├── index.html
+├── 404.html
+├── favicon.ico
+├── robots.txt
+├── sitemap.xml
+├── site.webmanifest
+├── _headers
+├── _redirects
+├── README.md
+└── LICENSE
 ```
-index.html            main page (no inline CSS, JS or base64 images)
-contact/index.html   contact page (served at /contact/)
-404.html              not-found page
-favicon.ico
-site.webmanifest
-robots.txt
-sitemap.xml
-_redirects            old .html URLs -> clean URLs
-_headers              security + cache headers (Netlify / Cloudflare Pages)
-css/
-  base.css            design tokens, reset, typography, layout
-  navigation.css      top navigation
-  hero.css            hero, affiliations, social links
-  sections.css        projects, research, experience, Beyond Tech, lightbox
-  case-study.css      case-study pages
-  contact.css         contact page
-  all-work.css        "All work" page
-  approach.css        "How I approach problems"
-  animations.css      motion and reveal effects
-  mobile.css          phone and small-tablet refinements (loaded after about.css)
-  theme.css           light / dark theme toggle
-  services.css        services section
-  about.css           about section
-  utilities.css       small helpers, skip link, print styles
-js/
-  theme-init.js       runs in <head> to prevent a theme flash
-  theme.js            theme toggle
-  router.js           hash routing for case-study pages
-  nav.js              active nav link
-  menu.js             mobile menu (hamburger)
-  disclosure.js       Beyond Tech toggles
-  lightbox.js         photo viewer
-  running-track.js    running animation
-  contact-form.js     contact form (validation, opens email draft)
-  analytics.js        PostHog analytics (project key is set inside the file)
-  approach-reveal.js  approach section reveal
-  reveal.js           scroll reveal + progress bar
-images/
-  logos/  profile/  projects/  creative/  running/  photography/  icons/
-  og-image.png        social preview card (1200x630)
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/techarsalan/personal-portfolio-website.git
 ```
 
-Load order of the CSS files in `index.html` matters (later files override earlier ones). Keep it as is.
+Navigate to the project directory:
 
-## Before you publish: replace the placeholder domain
+```bash
+cd personal-portfolio-website
+```
 
-`https://your-domain.com` appears in:
-- `index.html`, `contact/index.html` (served at `/contact/`) (canonical, og:url, og:image, twitter:image, JSON-LD)
-- `robots.txt`
-- `sitemap.xml`
+Open `index.html` in your browser.
 
-Search and replace it with your real domain.
+No package installation, framework setup, or build process is required.
 
-## Contact form
+## Deployment
 
-The form on `contact/index.html` (served at `/contact/`) validates the message, then opens the visitor's email app with a draft addressed to `arsalanjmi87@gmail.com`, pre-filled with their name, email, topic and message. They press Send in their mail app. No third-party form service is used.
+The website is deployed using SourceHut Pages.
 
-## Service enquiries
+**Live Website:** https://whoarsalan.srht.site
 
-Each service card links to `/contact/?service=<key>`, which pre-selects that service in the form's "What is this about?" dropdown. The service name is added to the email subject. To add a service, give its card a new key and add a matching `<option data-key="...">` in `contact/index.html` (served at `/contact/`).
+The `_headers` and `_redirects` configuration files are formatted for static hosting environments that support these conventions, including Netlify and Cloudflare Pages.
 
-## Adding content
+## Development Philosophy
 
-- New image: put it in the matching `images/` subfolder (WebP recommended, max ~1600px wide) and give the `<img>` real `width` and `height` attributes.
-- New section styles: add to the closest CSS file, or create a new one and link it in `index.html` before `utilities.css`.
+The objective was to build a personal website from scratch using core web technologies rather than relying on a frontend framework.
 
-## Analytics (PostHog)
+The project focuses on modular code, responsive design, accessibility, performance, search engine discoverability, and privacy-conscious analytics.
 
-`js/analytics.js` loads PostHog (US cloud, project key already set) on every page. It is a separate file because the Content-Security-Policy blocks inline scripts.
-The CSP tags in `index.html` and `contact/index.html` (served at `/contact/`) already allow `us.i.posthog.com` and `us-assets.i.posthog.com`. For the EU cloud, change the hosts in `analytics.js` and in both CSP tags.
-Session recording and surveys are switched off in `analytics.js`; enabling them also needs CSP changes.
+AI tools such as ChatGPT and Claude were used to support brainstorming, problem-solving, and development. The implementation and final project structure were brought together through an iterative development process.
+
+## Connect With Me
+
+- **Portfolio:** https://whoarsalan.srht.site
+- **GitHub:** https://github.com/techarsalan
+- **LinkedIn:** https://www.linkedin.com/in/whoarsalan/
+
+For professional inquiries, collaborations, opportunities, and discussions around technology, feel free to connect.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Maintained by Arsalan Ahmad.
