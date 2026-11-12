@@ -1,0 +1,4 @@
+# Send old .html URLs to the clean ones (Netlify / Cloudflare Pages)
+/index.html     /          301
+/contact.html   /contact/  301
+/contact        /contact/  301
