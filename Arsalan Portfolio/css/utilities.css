@@ -1,0 +1,15 @@
+/* ---- utilities & components (formerly inline styles) ---- */
+.skip-link{position:fixed;left:16px;top:-80px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:15px;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
+.muted{color:var(--mute)}
+.cover.cover--image{padding:0;border:0;display:block}
+.cover--image img{width:100%;height:100%;object-fit:cover;display:block}
+.mk-5k{left:11.85%}.mk-10k{left:23.7%}.mk-21k{left:50%}.mk-42k{left:100%}
+.cs-chips--center{justify-content:center;gap:10px}
+.link--spaced{display:inline-block;margin-top:14px}
+.cs-sec p.cs-subhead{margin:0 0 10px;font-size:15px;color:var(--mute)}
+.cs-sec p.cs-subhead--spaced{margin-top:22px}
+button.pimg{display:block;width:100%;padding:0;border:0;font:inherit;color:inherit;text-align:inherit}
+.cs-main{display:block}
+.noscript-note{padding:12px 24px;text-align:center;font-size:15px;color:var(--mute)}
+@media print{.progress,header.nav,.tt,.lb,.cdlg,.svc-orb{display:none!important}body{background:#fff;color:#000}.js .rv,.js .how .step,.js .how .how-head{opacity:1!important;transform:none!important}}

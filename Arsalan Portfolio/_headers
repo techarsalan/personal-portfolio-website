@@ -1,0 +1,13 @@
+# Works on Netlify and Cloudflare Pages. For Apache/Nginx, copy these into your server config.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/css/*
+  Cache-Control: public, max-age=86400, must-revalidate
+/js/*
+  Cache-Control: public, max-age=86400, must-revalidate
+/images/*
+  Cache-Control: public, max-age=604800
