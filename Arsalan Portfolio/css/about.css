@@ -1,5 +1,0 @@
-/* about */
-#about{padding:120px 0}
-.about-text{margin-top:40px}
-.about-text .lede{max-width:34em;font-size:20px;line-height:1.7;margin:0 0 28px}
-@media (max-width:800px){#about{padding:80px 0}}
